@@ -39,20 +39,20 @@
     <title> 과제 검사 시스템 로그인 로그인 페이지 </title>
 </head>
 <body>
-    <form action = "test.aspx" method="post">
+    <form id="form1" runat="server">
 		<table class="login">
 			<tr>
                 <td width="10"></td>
 				<th style="color:black; text-align:right;" class="auto-style1"><label for="username"> 아이디:</label></th>
 				<td width = "30" class="auto-style1"></td>
-				<td style="text-align:right;" class="auto-style1"><input style="text-align:right; width:200px; height:20px; font-size:30pt;" type="text" name="username" id="username" tabindex="1" autofocus required/></td>
+				<td style="text-align:right;" class="auto-style1"><input style="text-align:right; width:200px; height:20px; font-size:10pt;" type="text" name="loginID" id="username" tabindex="1" autofocus required/></td>
                 <td width="10"></td>
 			</tr>				           
             <tr>
                 <td width="10"></td>
 				<th style="color:black; text-align:right;"><label for="password">비밀번호:</label></th>
 				<td width = "30"></td>
-				<td style="text-align:right;"><input style="text-align:right; width:200px; height:20px; font-size:30pt;" type="password" name="password" id="password" tabindex="2" required /></td>
+				<td style="text-align:right;"><input style="text-align:right; width:200px; height:20px; font-size:10pt;" type="password" name="password" id="password" tabindex="2" required /></td>
                 <td width="10"></td>
 			</tr>
 			<tr>
@@ -65,7 +65,7 @@
 				<td class="auto-style2"></td>
 				<td style="text-align:right;" class="auto-style2">
 				    <!--<asp: input type="submit" name = "login" value="로그인" data-wait="Please wait..." class="w-button">-->
-                    <asp:Button ID="LoginButton" runat="server" text="로그인" class="w-button"/>
+                    <asp:Button ID="LoginButton" runat="server" text="로그인" class="w-button" OnClick="Login" />
 				</td>
                 <td width="10"></td>
 			</tr>
