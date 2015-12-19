@@ -130,7 +130,8 @@ namespace Database_Project
                         else
                         {
                             // 페이지 이동
-                            //Server.Transfer("Main.aspx");
+                            Session.Add("PID", "21111797");
+                            Server.Transfer("~/Professor/Main.aspx");
                         }
                     }
                 }
