@@ -22,7 +22,7 @@ namespace Database_Project
             String ID = "";
             String Passwd = "";
             String query_sid = "";
-            String query_pid = "";
+            String query_plid = "";
             String query_spwd = "";
             String query_ppwd = "";
             String msg = "";
@@ -32,7 +32,7 @@ namespace Database_Project
             // HTML 폼에서 입력한 값들을 C# 변수에 할당.
 
             query_sid = String.Format("select sid from student where sid = '{0}'", ID);
-            query_pid = String.Format("select pid from professor where pid = '{0}'", ID);
+            query_plid = String.Format("select plid from professor where plid = '{0}'", ID);
             query_spwd = String.Format("select spwd from student where spwd = '{0}'", Passwd);
             query_ppwd = String.Format("select ppwd from professor where ppwd = '{0}'", Passwd);
 
@@ -62,7 +62,7 @@ namespace Database_Project
                 if (row[0]["sid"].ToString().Equals(ID) == false)
                 {
                     // 쿼리문 교체 및 dataset 초기화
-                    cmd.CommandText = query_pid;
+                    cmd.CommandText = query_plid;
                     cmd.CommandType = CommandType.Text;
                     adapter.SelectCommand = cmd;
                     dataset.Clear();
@@ -96,7 +96,7 @@ namespace Database_Project
             {
                 DataRow[] row = table.Select();
                 // 쿼리문 교체하고 dataset 초기화
-                cmd.CommandText = query_pid;
+                cmd.CommandText = query_plid;
                 cmd.CommandType = CommandType.Text;
                 adapter.SelectCommand = cmd;
                 dataset.Clear();
@@ -107,7 +107,7 @@ namespace Database_Project
                 if (table != null && table.Rows.Count > 0)
                 {
                     // 만약 교번마저 일치하지 않는다면
-                    if (row[0]["pid"].ToString().Equals(ID) == false)
+                    if (row[0]["plid"].ToString().Equals(ID) == false)
                     {
                         msg = "아이디가 일치하지 않습니다. 다시 로그인 해주세요.";
                         Response.Write("<script type='text/javascript'> alert('" + msg + "');</script>");
@@ -126,8 +126,8 @@ namespace Database_Project
                         if (row.Length != 0)
                         {
                             // 페이지 이동
-                            Session.Add("PID", "21111797");
-                                Server.Transfer("~/Professor/Main.aspx");
+                            Session.Add("PLID", ID);
+                            Server.Transfer("~/Professor/Main.aspx");
                         }
                         else
                         {
