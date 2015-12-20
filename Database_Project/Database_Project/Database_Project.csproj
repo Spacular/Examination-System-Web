@@ -63,6 +63,7 @@
     <Content Include="Professor\Main.aspx" />
     <Content Include="Professor\Subject.aspx" />
     <Content Include="Register\Registeration.aspx" />
+    <Content Include="Register\Rereg.aspx" />
     <Content Include="Student\Student.aspx" />
     <Content Include="Web.config" />
     <Content Include="Index.aspx" />
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="Register\Registeration.aspx.designer.cs">
       <DependentUpon>Registeration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register\Rereg.aspx.cs">
+      <DependentUpon>Rereg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register\Rereg.aspx.designer.cs">
+      <DependentUpon>Rereg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>

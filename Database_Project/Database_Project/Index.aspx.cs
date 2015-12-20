@@ -15,7 +15,7 @@ namespace Database_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
         protected void Login(object sender, EventArgs e)
         {
