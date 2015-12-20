@@ -22,3 +22,9 @@ D:\repository\Examination-System-Web\Database_Project\Database_Project\obj\Debug
 D:\repository\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.dll.config
 D:\repository\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.dll
 D:\repository\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.pdb
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.dll.config
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.dll
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.pdb
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\obj\Debug\Database_Project.csprojResolveAssemblyReference.cache
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\obj\Debug\Database_Project.dll
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\obj\Debug\Database_Project.pdb

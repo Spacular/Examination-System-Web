@@ -61,6 +61,7 @@
   <ItemGroup>
     <Content Include="Background.png" />
     <Content Include="Professor\Main.aspx" />
+    <Content Include="Professor\Subject.aspx" />
     <Content Include="Register\Registeration.aspx" />
     <Content Include="Student\Student.aspx" />
     <Content Include="Web.config" />
@@ -75,6 +76,13 @@
     </Compile>
     <Compile Include="Professor\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Professor\Subject.aspx.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Professor\Subject.aspx.designer.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Index.aspx.cs">
