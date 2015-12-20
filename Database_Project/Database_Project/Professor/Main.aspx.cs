@@ -57,6 +57,13 @@ namespace Database_Project.Professor
             {
                 int index = Int32.Parse(e.CommandArgument.ToString());
                 GridView1.SelectRow(index);
+                Response.Cookies["PTAB"]["SBID"] = GridView1.SelectedRow.Cells[0].Text;
+                Response.Cookies["PTAB"]["SBNAME"] = GridView1.SelectedRow.Cells[1].Text;
+                Response.Cookies["PTAB"]["SBYEAR"] = GridView1.SelectedRow.Cells[5].Text;
+                Response.Cookies["PTAB"]["TYEAR"] = GridView1.SelectedRow.Cells[2].Text;
+                Response.Cookies["PTAB"]["TTERM"] = GridView1.SelectedRow.Cells[3].Text;
+                Response.Cookies["PTAB"]["STNUM"] = GridView1.SelectedRow.Cells[4].Text;
+
                 Server.Transfer("~/Professor/Subject.aspx", true);
             }
         }

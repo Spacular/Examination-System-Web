@@ -32,7 +32,7 @@
         <table style="width:100%;">
             <tr>
                 <td><h1>
-                    <asp:Label ID="Label1" runat="server" Text="강의명"></asp:Label>
+                    <asp:Label ID="Label_SBNAME" runat="server" Text="강의명"></asp:Label>
 &nbsp;강의</h1></td>
             </tr>
             <tr>
@@ -42,7 +42,7 @@
                             <td class="auto-style1">강의번호</td>
                             <td class="auto-style2">:</td>
                             <td>
-                                <asp:TextBox ID="TextBox_SBID" runat="server" Width="64px"></asp:TextBox>
+        <asp:Label ID="Label_SBID" runat="server"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@
                             <td class="auto-style2">:</td>
                             <td>
                                 <asp:Label ID="Label_SubYear" runat="server"></asp:Label>
-                            </td>
+                                년</td>
                         </tr>
                         <tr>
                             <td class="auto-style1">대상 학년</td>
@@ -79,7 +79,7 @@
                             <td class="auto-style2">:</td>
                             <td>
                                 <asp:Label ID="Label_StuNumber" runat="server"></asp:Label>
-                            </td>
+                                명</td>
                         </tr>
                     </table>
                 </td>
@@ -103,7 +103,7 @@
             </tr>
             <tr>
                 <td>
-                                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" EmptyDataText="현재 검사할 과제가 없습니다." ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataSourceID="SelProjects" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView2_RowCommand" AllowPaging="True">
+                                <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" EmptyDataText="현재 검사할 과제가 없습니다." ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataSourceID="SelProjects" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand" AllowPaging="True">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="EXDATE" HeaderText="검사일" SortExpression="EXDATE" DataFormatString="{0:yyyy/MM/dd}"/>

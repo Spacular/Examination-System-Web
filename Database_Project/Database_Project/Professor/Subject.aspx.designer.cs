@@ -22,22 +22,22 @@ namespace Database_Project.Professor {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label1 control.
+        /// Label_SBNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label_SBNAME;
         
         /// <summary>
-        /// TextBox_SBID control.
+        /// Label_SBID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_SBID;
+        protected global::System.Web.UI.WebControls.Label Label_SBID;
         
         /// <summary>
         /// TextBox_SBNAME control.
