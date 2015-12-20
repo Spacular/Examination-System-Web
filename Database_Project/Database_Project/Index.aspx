@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <style>
     body{
-        //background-image: url('/배경.png');
         background-repeat: no-repeat;
         background-image: url('/background.png');
         height: 511px;

@@ -49,7 +49,6 @@ namespace Database_Project
                 query_ppwd = String.Format("select ppwd from professor where ppwd = '{0}'", Passwd);
 
                 // sql 쿼리 수행
-                //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["xe"].ConnectionString);
                 OracleConnection conn = new OracleConnection();
                 conn.ConnectionString = "Data Source=xe; User ID=team43; Password=12345678";
                 OracleCommand cmd = new OracleCommand(query_sid, conn);
