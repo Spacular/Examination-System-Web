@@ -17,12 +17,11 @@ namespace Database_Project.Professor
             {
                 //refer : http://www.aspsnippets.com/Articles/Pass-Selected-Row-of-ASPNet-GridView-control-to-another-Page.aspx
                 //refer : http://www.codeproject.com/Articles/16756/Cross-Page-Postbacks-on-a-GridView
-                GridView GridView_temp = (GridView)this.PreviousPage.Form.FindControl("GridView1");
-                GridViewRow selectedRow = GridView_temp.SelectedRow;
                 if (Request.Cookies["PTAB"] != null)
                 {
+                    String curCookie = Server.UrlDecode(Request.Cookies.Get("PTAB")["SBNAME"]);
                     Label_SBID.Text = Request.Cookies["PTAB"]["SBID"];
-                    TextBox_SBNAME.Text = Request.Cookies["PTAB"]["SBNAME"];
+                    TextBox_SBNAME.Text = Label_SBNAME.Text = curCookie;
                     Label_SubYear.Text = Request.Cookies["PTAB"]["SBYEAR"];
                     TextBox_TYEAR.Text = Request.Cookies["PTAB"]["TYEAR"];
                     TextBox_TTERM.Text = Request.Cookies["PTAB"]["TTERM"];
@@ -32,6 +31,7 @@ namespace Database_Project.Professor
                 //Bind Gridview
                 //SelProjects.SelectParameters.Add(":SBID", DbType.Decimal, SBID);
                 SelProjects.SelectParameters["SBID"].DefaultValue = Label_SBID.Text;
+
             }
             
         }

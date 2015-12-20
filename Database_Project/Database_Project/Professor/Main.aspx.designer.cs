@@ -49,6 +49,15 @@ namespace Database_Project.Professor {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
+        /// Button_Add_Proj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Add_Proj;
+        
+        /// <summary>
         /// SelSubjects control.
         /// </summary>
         /// <remarks>

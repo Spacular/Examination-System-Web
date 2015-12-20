@@ -58,7 +58,7 @@ namespace Database_Project.Professor
                 int index = Int32.Parse(e.CommandArgument.ToString());
                 GridView1.SelectRow(index);
                 Response.Cookies["PTAB"]["SBID"] = GridView1.SelectedRow.Cells[0].Text;
-                Response.Cookies["PTAB"]["SBNAME"] = GridView1.SelectedRow.Cells[1].Text;
+                Response.Cookies["PTAB"]["SBNAME"] = Server.UrlEncode(GridView1.SelectedRow.Cells[1].Text);
                 Response.Cookies["PTAB"]["SBYEAR"] = GridView1.SelectedRow.Cells[5].Text;
                 Response.Cookies["PTAB"]["TYEAR"] = GridView1.SelectedRow.Cells[2].Text;
                 Response.Cookies["PTAB"]["TTERM"] = GridView1.SelectedRow.Cells[3].Text;
@@ -66,6 +66,11 @@ namespace Database_Project.Professor
 
                 Server.Transfer("~/Professor/Subject.aspx", true);
             }
+        }
+
+        protected void Button_Add_Proj_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("~/Professor/Subject_Add.aspx", true);
         }
     }
     

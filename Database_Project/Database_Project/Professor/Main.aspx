@@ -32,7 +32,7 @@
                             <td style="width:50%; text-align:center;">현재강의 현황</td>
                         </tr>
                         <tr>
-                            <td style="text-align:center;" class="auto-style1">
+                            <td style="text-align:center; vertical-align: top;" class="auto-style1">
                                 <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" EmptyDataText="현재 검사할 과제가 없습니다." ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
@@ -54,7 +54,7 @@
                                     <SortedDescendingHeaderStyle BackColor="#383838" />
                                 </asp:GridView>
                             </td>
-                            <td style="width:50%; text-align:center;">
+                            <td style="width:50%; text-align:center; vertical-align: top;">
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" EmptyDataText="현재 강의중인 과목이 없습니다." ShowHeaderWhenEmpty="True" DataSourceID="SelSubjects" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" HorizontalAlign="Center" OnRowCommand="GridView1_RowCommand" DataKeyNames="SBID,SBYEAR" AllowPaging="True">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
@@ -75,7 +75,8 @@
                                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                                     <SortedDescendingHeaderStyle BackColor="#383838" />
                                 </asp:GridView>
-                              
+                                <asp:Button ID="Button_Add_Proj" runat="server" OnClick="Button_Add_Proj_Click" Text="강의 등록" />
+                              <br />
                             </td>
                         </tr>
                         <tr>

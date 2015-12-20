@@ -12,15 +12,21 @@ namespace Database_Project.Professor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label tempLabel;
+            Label tempLabel2;
+            Label tempLabel3;
             if (this.PreviousPage != null)
             {
-                Label tempLabel = (Label)this.PreviousPage.Form.FindControl("Label_SBNAME");
-                Label tempLabel2 = (Label)this.PreviousPage.Form.FindControl("Label_SubYear");
-                Label tempLabel3 = (Label)this.PreviousPage.FindControl("Label_SBID");
+                tempLabel = (Label)this.PreviousPage.Form.FindControl("Label_SBNAME");
+                tempLabel2 = (Label)this.PreviousPage.Form.FindControl("Label_SubYear");
+                tempLabel3 = (Label)this.PreviousPage.FindControl("Label_SBID");
                 Label_SBNAME.Text = tempLabel.Text;
                 Label_SBYEAR.Text = tempLabel2.Text;
                 Label_SBID.Text = tempLabel3.Text;
             }
+
+            SelAtten.SelectParameters["SBID"].DefaultValue = Label_SBID.Text;
+            SelAtten.SelectParameters["SBYEAR"].DefaultValue = Label_SBYEAR.Text;
             //refer http://egloos.zum.com/nom3203/v/1999538
             if (!IsPostBack) //백 버튼 구현 
             {
