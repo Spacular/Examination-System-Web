@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Database_Project.Professor.Main" %>
+
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Examination System</title>
@@ -7,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
+    
         <table style="width:100%;">
             <tr>
                 <td>Wellcome Professor!</td>
