@@ -47,6 +47,8 @@ namespace Database_Project.Register
             row[0]["spwd"] = Passwd;
 
             adapter.Update(row);
+
+            Response.Redirect("../Index.aspx");
         }
     }
 }
