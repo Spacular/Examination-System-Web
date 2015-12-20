@@ -11,7 +11,7 @@ namespace Database_Project.Professor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["PID"] = "21111797";
+
         }
     }
 }
