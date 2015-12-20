@@ -31,7 +31,7 @@
                                 <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" EmptyDataText="현재 검사할 과제가 없습니다." ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
-                                        <asp:BoundField DataField="EXDATE" HeaderText="검사일" SortExpression="EXDATE" DataFormatString="{0:yyyy년 MM월 dd일}"/>
+                                        <asp:BoundField DataField="EXDATE" HeaderText="검사일" SortExpression="EXDATE" DataFormatString="{0:yyyy/MM/dd}"/>
                                         <asp:BoundField DataField="SBID" HeaderText="강의번호" SortExpression="SBID" />
                                         <asp:BoundField DataField="PJNAME" HeaderText="과제명" SortExpression="PJNAME" />
                                         <asp:BoundField DataField="PJTYPE" HeaderText="과제 종류" SortExpression="PJTYPE" />
