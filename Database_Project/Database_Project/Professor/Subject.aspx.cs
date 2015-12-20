@@ -100,5 +100,10 @@ namespace Database_Project.Professor
                 cmd.Dispose();
             }
         }
+
+        protected void Button_Back_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("~/Professor/Main.aspx", true);
+        }
     }
 }

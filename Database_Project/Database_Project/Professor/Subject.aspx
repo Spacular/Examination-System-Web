@@ -139,7 +139,9 @@
                 </td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" />
+                </td>
             </tr>
         </table>
     
