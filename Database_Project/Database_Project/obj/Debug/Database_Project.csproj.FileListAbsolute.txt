@@ -16,3 +16,9 @@ C:\Users\simpsons\OneDrive\Database_Project\Projects\Database_Project\bin\Databa
 C:\Users\simpsons\OneDrive\Database_Project\Projects\Database_Project\obj\Debug\Database_Project.csprojResolveAssemblyReference.cache
 C:\Users\simpsons\OneDrive\Database_Project\Projects\Database_Project\obj\Debug\Database_Project.dll
 C:\Users\simpsons\OneDrive\Database_Project\Projects\Database_Project\obj\Debug\Database_Project.pdb
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.dll.config
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.dll
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\bin\Database_Project.pdb
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\obj\Debug\Database_Project.csprojResolveAssemblyReference.cache
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\obj\Debug\Database_Project.dll
+D:\GitHub\Examination-System-Web\Database_Project\Database_Project\obj\Debug\Database_Project.pdb
