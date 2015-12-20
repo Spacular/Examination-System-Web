@@ -17,7 +17,12 @@
     
         <table style="width:100%;">
             <tr>
-                <td>Wellcome Professor!</td>
+                <td><h1>메인 화면</h1></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">
+                    <asp:Label ID="Label_PID" runat="server" Text="교수"></asp:Label>
+                    님 환영합니다.</td>
             </tr>
             <tr>
                 <td>
@@ -39,7 +44,7 @@
                                         <asp:ButtonField ButtonType="Button" Text="보기" />
                                         <asp:ButtonField ButtonType="Button" Text="수정" />
                                     </Columns>
-                                    <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" BackColor="#CCCCCC" />
+                                    <FooterStyle BackColor="#CCCCCC" />
                                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
                                     <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
@@ -70,11 +75,7 @@
                                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                                     <SortedDescendingHeaderStyle BackColor="#383838" />
                                 </asp:GridView>
-                                <asp:SqlDataSource ID="SelSubjects" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT &quot;SBID&quot;, &quot;SBNAME&quot;, &quot;TTERM&quot;, &quot;TYEAR&quot;, &quot;SNUMBER&quot;, &quot;SBYEAR&quot; FROM &quot;SUBJECT&quot; WHERE (&quot;PID&quot; = :PID)">
-                                    <SelectParameters>
-                                        <asp:SessionParameter Name="PID" SessionField="PID" Type="Decimal" />
-                                    </SelectParameters>
-                                </asp:SqlDataSource>
+                              
                             </td>
                         </tr>
                         <tr>
@@ -95,6 +96,11 @@
         </table>
     
     </div>
+                                <asp:SqlDataSource ID="SelSubjects" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT &quot;SBID&quot;, &quot;SBNAME&quot;, &quot;TTERM&quot;, &quot;TYEAR&quot;, &quot;SNUMBER&quot;, &quot;SBYEAR&quot; FROM &quot;SUBJECT&quot; WHERE (&quot;PID&quot; = :PID)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="PID" SessionField="PID" Type="Decimal" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
     </form>
 </body>
 </html>

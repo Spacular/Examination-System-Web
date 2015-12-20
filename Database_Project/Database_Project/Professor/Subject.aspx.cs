@@ -25,7 +25,7 @@ namespace Database_Project.Professor
                 
                 //Set SubJect
                 TextBox_SBID.Text = SBID = selectedRow.Cells[0].Text;
-                TextBox_SBNAME.Text = selectedRow.Cells[1].Text;
+                TextBox_SBNAME.Text = Label1.Text = selectedRow.Cells[1].Text;
                 Label_SubYear.Text = selectedRow.Cells[5].Text + "년";
                 TextBox_TYEAR.Text = selectedRow.Cells[2].Text;
                 TextBox_TTERM.Text = selectedRow.Cells[3].Text;
@@ -46,7 +46,21 @@ namespace Database_Project.Professor
 
         protected void Button_modify_Click(object sender, EventArgs e)
         {
+            String query = "UPDATE SUBJECT SET ";
+            OracleConnection conn = new OracleConnection();
+            conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
+            //query
+            //query += "SBID=" + SBID;
+            //query += " AND SBYEAR=" + Label_SubYear.Text;
+            //Response.Write(query);
+            conn.Open();
+            OracleCommand cmd = new OracleCommand(query, conn);
+            cmd.ExecuteNonQuery();
+
+            GridView1.DataBind();
+            conn.Dispose();
+            cmd.Dispose();
         }
 
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -65,25 +79,24 @@ namespace Database_Project.Professor
             }
             if (e.CommandName == "DeleteProject") //refer : http://www.java2s.com/Tutorial/CSharp/0560__ADO.Net/DoadeletecommandtoOracledatabase.htm
             {
-                String query = "DELETE FROM PROJECT WHERE ";
+                String query = "DELETE FROM PROJECT WHERE EXDATE=to_date(:EXDATE,'yyyy/MM/dd') AND SBID=:SBID AND PJNAME=:PJNAME";
+                
                 OracleConnection conn = new OracleConnection();
                 conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                 
                 int index = Int32.Parse(e.CommandArgument.ToString());
                 GridView1.SelectRow(index);
                 GridViewRow selectedRow = GridView1.SelectedRow;
-                query += "EXDATE=to_date(" + selectedRow.Cells[0].Text + ",'yyyy/MM/dd')";
-                query += " AND SBID=" + selectedRow.Cells[1].Text;
-                query += " AND PJNAME='" + selectedRow.Cells[2].Text + "'";
-                //Response.Write(query);
                 conn.Open();
                 OracleCommand cmd = new OracleCommand(query, conn);
+                cmd.Parameters.Add(new OracleParameter("EXDATE", selectedRow.Cells[0].Text));
+                cmd.Parameters.Add(new OracleParameter("SBID", selectedRow.Cells[1].Text));
+                cmd.Parameters.Add(new OracleParameter("PJNAME", selectedRow.Cells[2].Text));
                 cmd.ExecuteNonQuery();
 
                 GridView1.DataBind();
                 conn.Dispose();
                 cmd.Dispose();
-                
             }
         }
     }
