@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -58,19 +59,43 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Professor\Main.aspx" />
+    <Content Include="Register\Registeration.aspx" />
+    <Content Include="Student\Student.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Index.aspx" />
     <Content Include="배경.png" />
     <Content Include="학교마크.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Professor\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Professor\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register\Registeration.aspx.cs">
+      <DependentUpon>Registeration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register\Registeration.aspx.designer.cs">
+      <DependentUpon>Registeration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
